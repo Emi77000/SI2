@@ -12,53 +12,67 @@
             padding: 0;
         }
         .header {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            background-color: #f0f0f0;
-        }
-        .header .logo {
-            color: #8ECAE6;
-            font-family: 'Merriweather', serif;
-            font-size: 24px;
-            margin-right: 20px;
-        }
-        .navbar {
-            background-color: #023047;
-            padding: 10px;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-grow: 1;
-        }
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            font-family: 'Merriweather', serif;
-            padding: 10px 20px;
-            position: relative;
-        }
-        .navbar a.active {
-            color: #FFB703;
-        }
-        .navbar a.active::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 5px;
-            height: 5px;
-            background-color: #FFB703;
-            border-radius: 50%;
-        }
-        .navbar .logout {
-            padding: 10px 20px;
-        }
-        .navbar .logout img {
-            width: 20px;
-            height: 20px;
-        }
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo a {
+    color: #219EBC;
+    font-family: 'Merriweather', serif;
+    font-size: 32px; /* légèrement agrandi */
+    font-weight: 700;
+    text-decoration: none;
+    margin-right: 40px;
+}
+
+.navbar {
+    background-color: #023047;
+    padding: 20px 30px; /* hauteur augmentée */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    gap: 140px;
+    border-radius: 10px;
+}
+
+.navbar a {
+    color: white;
+    font-size: 18px; /* texte plus grand */
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #FFB703;
+}
+
+.navbar a.active {
+    color: #FFB703;
+}
+
+.navbar a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #FFB703;
+    border-radius: 50%;
+}
+
+.navbar .logout img {
+    width: 24px;
+    height: 24px;
+    filter: brightness(0) invert(1);
+}
         .search-bar {
             margin: 20px;
             display: flex;
@@ -137,7 +151,7 @@
 </head>
 <body>
     <div class="header">
-        <div class="logo">Airblio</div>
+    <div class="logo"><a href="accueil.php">Airblio</a></div>
         <div class="navbar">
             <a href="accueil.php">Accueil</a>
             <a href="intervention.php">Intervention</a>
